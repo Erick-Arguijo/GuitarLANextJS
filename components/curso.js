@@ -3,7 +3,7 @@ import style from '../styles/curso.module.css';
 const Curso = ({curso}) => {
     const {titulo, contenido, imagen,updatedAt} = curso.data.attributes
     const urlImg = imagen.data.attributes.url
-    console.log(imagen)
+    
   return (
     <section className={`${style.curso} curso`}>
         <style jsx>{`

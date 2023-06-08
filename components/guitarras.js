@@ -4,7 +4,7 @@ import ListadoGuitarras from './listadoGuitarras'
 
  const GuitarrasIndex = ({guitarras}) => {
     const {data} = guitarras
-    console.log(guitarras)
+   
   return (
     <main className='contenedor'>
         <h2 className='heading'>Nuestra Coleccion</h2>

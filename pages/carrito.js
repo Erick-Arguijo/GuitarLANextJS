@@ -42,7 +42,7 @@ const Carrito = ({carrito, agregarCarrito, eliminarGuitarra}) => {
                         <option value="4">4</option>
                         <option value="5">5</option>
                       </select>
-                      <p class={style.precio}>{formatPrecio(guitarra.precio)}</p>
+                      <p className={style.precio}>{formatPrecio(guitarra.precio)}</p>
                       <p>Subtotal: 
                        <label className={style.precio}>
                        {formatPrecio(guitarra.precio* guitarra.cantidad)}

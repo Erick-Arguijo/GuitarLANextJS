@@ -5,7 +5,7 @@ export default function App({ Component, pageProps }) {
   const [carrito, setcarrito] = useState([])
   
   useEffect(() => {
-    console.log('desde localStorage')
+   
     if (carrito.length !==0) {
       localStorage.setItem('carrito', JSON.stringify(carrito))
     }
