@@ -76,7 +76,7 @@ export default Guitarra
 
 
 export const getStaticPaths = async () => {
-  const peticion = await fetch('http://localhost:1337/api/guitarras?populate=imagen')
+  const peticion = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`)
   const {data} = await peticion.json()
 
   const rutas = data.map(route=> ({params: {url: route.attributes.url}}))
@@ -89,7 +89,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
 
-  const peticion = await fetch(`http://localhost:1337/api/guitarras?filters[url]=${params.url}&populate=imagen`)
+  const peticion = await fetch(`${process.env.API_URL}/guitarras?filters[url]=${params.url}&populate=imagen`)
   const respuesta = await peticion.json();
   
   return { props: { respuesta } };

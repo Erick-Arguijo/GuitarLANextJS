@@ -26,7 +26,7 @@ const Guitarras = ({respuesta}) => {
 
 
 export const getStaticProps = async () => {
-  const peticion = await fetch('http://localhost:1337/api/guitarras?populate=imagen')
+  const peticion = await fetch(`${process.env.API_URL}/guitarras?populate=imagen`)
   const respuesta = await peticion.json()
   return {props:{respuesta}}
 }
