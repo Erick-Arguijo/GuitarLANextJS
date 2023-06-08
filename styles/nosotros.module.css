@@ -1,0 +1,24 @@
+.container{
+    display:flex;
+    gap:2rem;
+
+}
+
+.lorem{
+    width:60% ;
+}
+
+.img{
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media screen and (max-width:1024px){
+    .container{
+        flex-direction:column;
+    }
+    .lorem{
+        width: 100%;
+        padding:1rem 2rem;
+    }
+}

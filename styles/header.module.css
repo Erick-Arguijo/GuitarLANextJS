@@ -1,0 +1,63 @@
+.contenedor{
+    display:flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to left, transparent,  rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(../public/img/header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 1rem 6rem;
+    width: 100%;
+}
+
+.sectionEnlaces{
+    display: flex;
+    align-items: center;
+}
+
+.enlaces{
+    display:flex;
+    gap: 2rem;
+    font-weight:bold;
+    font-size:24px;
+    list-style: none;
+}
+
+.enlaces li a{
+    text-decoration: none;
+    color: white;
+}
+
+.activo{
+    color: #ba7600 !important;
+}
+
+.enlaces li a:hover{
+    color: var(--primary) 
+}
+
+.iconCarrito{
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 768px){
+    .contenedor{
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .enlaces{
+        display:flex;
+        padding: 0;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .img{
+        display: block;
+        margin:auto;
+    }
+    
+    
+}

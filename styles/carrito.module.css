@@ -1,0 +1,128 @@
+.container{
+    display:flex;   
+}
+
+
+.listado{
+    width: 60%;
+    margin-right: 8rem;
+}
+
+.total{
+    width: 40%;
+    background-color: ghostwhite;
+}
+
+.card{
+    display:flex;
+    gap: 2rem;
+    padding:1rem 3rem;
+    border-bottom: 2px solid grey;
+}
+
+.card:last-child{
+    border:none;
+}
+
+.imagenCard{
+    width: 20%;
+}
+
+.contenidoCard{
+    width: 50%;
+}
+
+.contenidoCard p{
+    margin: 10px 0;
+}
+
+.contenidoCard h3{
+    margin:10px 0;
+}
+
+.nombre{
+    font-weight:bold;
+    color: var(--primary);
+}
+
+.disponible{
+    font-weight:bold;
+    color: green;
+}
+
+.select{
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    padding: 0.8rem 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.precio{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.eliminar{
+    width: 100%;
+    padding: .8rem 1rem;
+    background-color:red;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.total{
+    text-align:center;
+    border-radius: 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    padding: 2rem;
+    position: sticky;
+    top: 3rem;
+    height: 250px;
+}
+
+.pagar{
+    width: 60%;
+    border: none;
+    border-radius: 8px;
+    padding:.8rem 1rem;
+    background-color:gray;
+    color: white;
+    cursor: pointer;
+}
+
+.totalPrecio{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.titulo{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px){
+    .container{
+        flex-direction:column;
+    }
+    .listado{
+        width: 90%;
+        margin: auto;
+    }
+
+    .imagenCard{
+        width: 40%;
+    }
+
+    .contenidoCard{
+        width: 60%;
+    }
+
+    .total{
+        width: 90%;
+        margin: 2rem auto;
+        
+    }
+}

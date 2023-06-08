@@ -1,0 +1,287 @@
+.listaCard{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+}
+
+@media screen and (max-width:1024px){
+  .listaCard{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width:768px){
+  .listaCard{
+    grid-template-columns: 1fr;
+  }
+
+  .card{
+    width: 81%;
+    margin:auto;
+  }
+}
+
+
+/*  Card */
+.card {
+    display: grid;
+    place-items: center;
+    height: 35.125rem;
+    overflow: hidden;
+    border-radius: 0.625rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+  }
+
+  .card h2 {
+    font-size: 2.25rem;
+    font-family: var(--font-title);
+    color: var(--white);
+    line-height: 1.1;
+    
+  }
+  
+ .card p {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--white);
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    display:-webkit-box; 
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:4;
+   
+  }
+  .card span{
+    font-size:1rem;
+    color: var(--primary);
+  }
+
+  .flow {
+    margin-top: var(--flow-space, 1em);
+  }
+
+.card > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+  
+  .cardBackground {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .cardContent {
+    margin-top: var(--flow-space, 1em);
+    --flow-space: 0.9375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-end;
+    height: 85%;
+    padding: 6% 1.25rem 1.875rem;
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.3) 10%,
+      hsl(0, 0%, 0%) 100%
+    );
+  }
+
+  .cardContentContainer {
+    margin-top: var(--flow-space, 1em);
+    --flow-space: 1.25rem;
+  }
+  
+  .cardTitle {
+    position: relative;
+    width: fit-content;
+    width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+  }
+
+  .cardTitle::after {
+    content: "";
+    position: absolute;
+    height: 0.3125rem;
+    width: calc(100% + 1.25rem);
+    bottom: calc((1.25rem - 0.5rem) * -1);
+    left: -1.25rem;
+    background-color: var(--brand-color);
+  }
+
+
+  
+  .cardButton {
+    padding: 0.75em 1.6em;
+    width: fit-content;
+    width: -moz-fit-content; /* Prefijo necesario para Firefox  */
+    font-variant: small-caps;
+    font-weight: bold;
+    border-radius: 0.45em;
+    border: none;
+    background-color: var(--brand-color);
+    font-family: var(--font-title);
+    font-size: 1.125rem;
+    color: var(--black);
+    cursor: pointer;
+    margin: auto;
+    display: block;
+  }
+  
+  .cardButton:focus {
+    outline: 2px solid black;
+    outline-offset: -5px;
+  }
+  
+  @media (any-hover: hover) and (any-pointer: fine) {
+    .cardContent {
+      transform: translateY(62%);
+      transition: transform 500ms ease-out;
+      transition-delay: 500ms;
+    }
+  
+    .cardTitle::after {
+      opacity: 0;
+      transform: scaleX(0);
+      transition: opacity 1000ms ease-in, transform 500ms ease-out;
+      transition-delay: 500ms;
+      transform-origin: right;
+    }
+  
+    .cardBackground {
+      transition: transform 500ms ease-in;
+    }
+  
+    .cardContentContainer > :not(.cardTitle),
+    .cardButton {
+      opacity: 0;
+      transition: transform 500ms ease-out, opacity 500ms ease-out;
+    }
+  
+    .card:hover,
+    .card:focus-within {
+      transform: scale(1.05);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:hover .cardContent,
+    .card:focus-within .cardContent {
+      transform: translateY(0);
+      transition: transform 500ms ease-in;
+    }
+  
+    .card:focus-within .cardContent {
+      transition-duration: 0ms;
+    }
+  
+    .card:hover .cardBackground,
+    .card:focus-within .cardBackground {
+      transform: scale(1.3);
+    }
+  
+    .card:hover .cardContentContainer > :not(.cardTitle),
+    .card:hover .cardButton,
+    .card:focus-within .cardContentContainer > :not(.cardTitle),
+    .card:focus-within .cardButton {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+      transition-delay: 1000ms;
+    }
+  
+    .card:hover .cardTitle::after,
+    .card:focus-within .cardTitle::after {
+      opacity: 1;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: opacity 500ms ease-in, transform 500ms ease-in;
+      transition-delay: 500ms;
+    }
+  }
+
+  /******************************/
+  
+  .button {
+    background-color: var(--primary);
+    --secondary-color: #fff;
+    --hover-color: grey;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    background-color: var(--primary);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 10px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+   
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+  }
+  
+  .button .arrowWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  .button:hover .arrow:before {
+    right: 0;
+  }
+
+
+  /*Curso*/
+
+  .imgCurso{
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  }
+  .section{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .fecha{
+    color: var(--primary);
+    font-weight: bold;
+  }

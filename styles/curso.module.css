@@ -1,0 +1,17 @@
+.curso{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 400px;
+    padding: 1rem 3rem;
+}
+
+@media screen and (max-width:1024px){
+    .curso{
+        grid-template-columns: 1fr;
+        height: 580px;
+    }
+}
+
+.curso p{
+    color: white;
+}

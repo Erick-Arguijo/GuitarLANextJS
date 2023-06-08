@@ -1,0 +1,128 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #171515;
+    padding: 4rem 4rem;
+}
+
+@media screen and (max-width: 1024px){
+    .footer{
+        grid-template-columns: 1fr;
+        padding-bottom: 8rem;
+    }
+
+    .navegacion{
+        margin: auto;
+    }
+    .redesSociales ul{
+        left:50% !important;
+        margin-bottom: 4rem;
+    }
+}
+
+
+/* Navegacion*/
+.sectionEnlaces{
+    display: flex;
+    align-items: center;
+}
+
+.enlaces{
+    display:flex;
+    gap: 2rem;
+    font-weight:bold;
+    font-size:24px;
+    list-style: none;
+}
+
+@media screen and (max-width:768px){
+    .enlaces{
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
+}
+.enlaces li a{
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.iconCarrito{
+    width: 30px;
+    height: 30px;
+}
+
+/*Terminos y condiciones*/
+
+.copy h2{
+    color: white;
+    font-weight: bold;
+    text-align:center ;
+}
+
+/* Redes sociales */
+.redesSociales {
+    color: white;
+    text-align:center
+}
+
+.redesSociales ul {
+    margin-top:10px;
+    padding:0;
+    display:flex;
+    position: absolute;
+    left:81%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .redesSociales  ul li {
+    list-style:none;
+    margin: 0 15px;
+  }
+  
+  .redesSociales  ul li a {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    background: #171515;
+    border-radius: 50%;
+    font-size: 30px;
+    color: #666;
+    transition: .5s;
+  }
+
+  .redesSociales ul li a svg{
+    width: 28px;
+    height: 32px;
+  }
+  
+  .redesSociales ul li a:before {
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background: #d35400;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+  }
+  
+  .redesSociales ul li a:hover:before {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px #d35400;
+    filter: blur(3px);
+  }
+  
+  .redesSociales ul li a:hover {
+    color: #ffa502;
+    box-shadow: 0 0 15px #d35400;
+    text-shadow: 0 0 15px #d35400;
+  }

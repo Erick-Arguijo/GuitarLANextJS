@@ -1,0 +1,21 @@
+.img{
+    display: block;
+    margin: auto;
+}
+
+.boton{
+    width: 50%;
+    padding:1rem 2rem;
+    border: none;
+    background-color: var(--primary);
+    color: white;
+    font-weight:bold;
+    margin: 2rem auto;
+    display: block;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color:#d18500;
+}
