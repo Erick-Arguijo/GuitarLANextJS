@@ -31,7 +31,7 @@ export const getStaticPaths = async () => {
     const peticion = await fetch(`${process.env.API_URL}/posts`)
     const {data} = await peticion.json()
     const params2 = data.map(curso => ({params:{blogUrl:curso.attributes.url}}))
-    return {paths: params2,fallback: true}
+    return {paths: params2,fallback: false}
 }
 
 
